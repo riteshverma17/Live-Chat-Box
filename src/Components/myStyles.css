@@ -8,11 +8,48 @@
 }
 
 .sideBar-container{
-    border: 3px solid red;
+    display: flex;
     flex: 0.3;
+    flex-direction: column;
+    
 }
 
 .workArea-container{
-    border: 3px solid blue;
+    background-color: aliceblue;
     flex: 0.7;
+}
+
+.sb-header{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 6px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sb-search{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 6px;
+    margin: auto 10px;
+    display: flex;
+    align-items: center;   
+}
+
+.search-box{
+    border: none;
+    outline-width: 0cap;
+    margin-left: 10px;
+    font-size: 1.24rem;
+
+}
+
+.sb-conversations{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 6px;
+    margin: 10px;
+    flex: 1;
+       
 }
