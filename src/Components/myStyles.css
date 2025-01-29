@@ -23,6 +23,7 @@
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 .sb-search {
   background-color: white;
@@ -31,6 +32,7 @@
   margin: auto 10px;
   display: flex;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .search-box {
@@ -39,6 +41,7 @@
   margin-left: 10px;
   font-size: 1.24rem;
   color: rgba(0, 0, 0, 0.54);
+  
 }
 
 .sb-conversations {
@@ -47,6 +50,12 @@
   padding: 10px 6px;
   margin: 10px;
   flex: 1;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.sb-conversations::-webkit-scrollbar {
+  display: none;
 }
 
 .conversation-container {
@@ -57,6 +66,7 @@
   padding: 5px;
   margin: 5px;
   border-radius: 20px;
+  
 }
 
 .con-icon {
@@ -79,6 +89,7 @@
   border-radius: 50%;
   justify-self: center;
   align-self: center;
+ 
 }
 
 .con-title {
@@ -98,7 +109,6 @@
 .con-lastMessage {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.75rem;
-
 }
 
 .chatArea-container {
@@ -116,6 +126,7 @@
   align-items: center;
   gap: 10px;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 .combo {
   display: flex;
@@ -128,6 +139,7 @@
   flex-direction: column;
   justify-content: center;
   float: 1;
+  
 }
 
 .message-container {
@@ -137,6 +149,11 @@
   margin: 10px;
   flex: 1;
   overflow: auto;
+  
+}
+
+.message-container::-webkit-scrollbar {
+  display: none;
 }
 
 .text-input-area {
@@ -147,6 +164,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .inputTEXT-box {
@@ -158,16 +176,15 @@
   color: rgba(0, 0, 0, 0.54);
 }
 
-.other-text-content{
-    background-color: #d9d9d9;
-    padding: 10px 10px;
-    margin: 5px;
-    border-radius: 20px;
-    width: max-content;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    
+.other-text-content {
+  background-color: #d9d9d9;
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  width: max-content;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .self-message-container {
@@ -186,9 +203,75 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.self-timeStamp{
-    align-self: flex-end;
-    font-size: 0.75rem;
-    font-weight:lighter ;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.self-timeStamp {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-logo {
+  height: 30vh;
+}
+
+.welcome-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+  border-bottom: 5px solid #63d7b0;
+  border-radius: 20px;
+}
+
+.createGroups-container {
+  flex: 0.7;
+  align-self: center;
+  padding: 20px 10px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-container {
+  height: 90vh;
+  width: 90vw;
+  background-color: #f4f5f8;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.image-container {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.login-box {
+  flex: 0.7;
+  background-color: white;
+  border-radius: 20px;
+  margin: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #63d7b0;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+.login-box p {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  
 }

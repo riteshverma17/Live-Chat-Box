@@ -7,8 +7,8 @@ import MessageOther from "./MessageOther";
 import MessageSelf from "./MessageSelf";
 
 
-function ChatArea() {
-  var props = {name: "Test1", timeStamp: "today" };
+function ChatArea({props}) {
+  
   return (
     <div className="chatArea-container">
       <div className="chatArea-header">
