@@ -18,13 +18,13 @@ function SideBar() {
       timeStamp: "today",
     },
     {
-      name: "Test1",
-      lastMessage: "Last Message #1",
+      name: "Test2",
+      lastMessage: "Last Message #2",
       timeStamp: "today",
     },
     {
-      name: "Test1",
-      lastMessage: "Last Message #1",
+      name: "Test3",
+      lastMessage: "Last Message #3",
       timeStamp: "today",
     }
   ]);
@@ -61,7 +61,7 @@ function SideBar() {
       </div>
       <div className="sb-conversations">
         {conversations.map((conversation) => {
-          return <ConversationItem props={conversation}/>
+          return <ConversationItem props={conversation} key={conversation.name} />
         })}
         
       </div>
