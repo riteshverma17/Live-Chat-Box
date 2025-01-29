@@ -15,17 +15,17 @@ function SideBar() {
     {
       name: "Test1",
       lastMessage: "Last Message #1",
-      timeStemp: "today",
+      timeStamp: "today",
     },
     {
       name: "Test1",
       lastMessage: "Last Message #1",
-      timeStemp: "today",
+      timeStamp: "today",
     },
     {
       name: "Test1",
       lastMessage: "Last Message #1",
-      timeStemp: "today",
+      timeStamp: "today",
     }
   ]);
 
