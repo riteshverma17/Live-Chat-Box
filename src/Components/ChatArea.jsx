@@ -3,16 +3,20 @@ import "./myStyles.css";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
+import MessageOther from "./MessageOther";
+import MessageSelf from "./MessageSelf";
 
-function ChatArea({ props }) {
+
+function ChatArea() {
+  var props = {name: "Test1", timeStamp: "today" };
   return (
     <div className="chatArea-container">
       <div className="chatArea-header">
         <div className="combo">
-          <div className="con-icon">T</div>
+          <div className="con-icon">{props.name[0]}</div>
           <div className="header-text">
-            <div className="con-title">Test1</div>
-            <div className="con-timeStamp">today</div>
+            <div className="con-title">{props.name}</div>
+            <div className="con-timeStamp">{props.timeStamp}</div>
           </div>
         </div>
 
@@ -22,7 +26,20 @@ function ChatArea({ props }) {
           </IconButton>
         </div>
       </div>
-      <div className="message-container">ChatArea-Message</div>
+      <div className="message-container">
+        <MessageOther />
+        <MessageSelf />
+        <MessageOther />
+        <MessageSelf />
+        <MessageOther />
+        <MessageSelf />
+        <MessageOther />
+        <MessageSelf />
+        <MessageOther />
+        <MessageSelf />
+        <MessageOther />
+        <MessageSelf />
+      </div>
       <div className="text-input-area">
         <input type="text" placeholder="Type a message..." className="inputTEXT-box" />
         <IconButton>
