@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import "./myStyles.css";
 import SideBar from './SideBar';
-import ChatArea from './ChatArea';
-import Welcome from './Welcome';
-import CreateGroups from './CreateGroups';
 import { Outlet } from 'react-router-dom';
-import Users from './Users';
-import Group from './Group';
+// import ChatArea from './ChatArea';
+// import Welcome from './Welcome';
+// import CreateGroups from './CreateGroups';
+// import Users from './Users';
+// import Group from './Groups';
 
 
 
@@ -17,10 +17,11 @@ function MainContainer() {
     <div className='main-container'>
       
       <SideBar />
-      {/* <Users /> */}
-      {/* <Outlet /> */}
-      <Group />
+      <Outlet />
+      
       {/* <Welcome /> */}
+      {/* <Group /> */}
+      {/* <Users /> */}
       {/* <CreateGroups /> */}
       {/* <ChatArea props = {conversations[0]}/> */}
     </div>

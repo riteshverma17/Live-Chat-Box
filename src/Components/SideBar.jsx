@@ -8,9 +8,12 @@ import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
 
 
 function SideBar() {
+  const navigate = useNavigate();
+  
   const [conversations , setConversations] = useState([
     {
       name: "Test1",
@@ -29,6 +32,7 @@ function SideBar() {
     }
   ]);
 
+
   return (
     <div className="sideBar-container">
       <div className="sb-header">
@@ -38,13 +42,13 @@ function SideBar() {
           </IconButton>
         </div>
         <div>
-          <IconButton>
+          <IconButton onClick={() => {navigate('users')}}>
             <PersonAddAltIcon />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => {navigate('groups')}}>
             <GroupAddIcon />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => {navigate('create-groups')}}>
             <AddCircleIcon />
           </IconButton>
           <IconButton>

@@ -4,12 +4,12 @@ import { IconButton } from '@mui/material';
 import SearchIcon from "@mui/icons-material/Search";
 import logo from "../Image/logo.png";
 
-function Group() {
+function Groups() {
   return (
     <div className='list-container'>
       <div className="ug-header">
         <img src={logo} alt="logo" style={{height:"2rem", width: "2rem", marginLeft: "10px"}} />
-        <p className='ug-title'>Available Users</p>
+        <p className='ug-title'>Available Groups</p>
       </div>
 
       <div className="sb-search">
@@ -65,4 +65,4 @@ function Group() {
   )
 }
 
-export default Group
+export default Groups

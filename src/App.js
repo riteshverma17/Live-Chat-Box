@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Welcome from './Components/Welcome';
 import ChatArea from './Components/ChatArea';
 import CreateGroups from './Components/CreateGroups';
+import Groups from './Components/Groups';
+import Users from './Components/Users';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='welcome' element={<Welcome />} />
           <Route path='chat' element={<ChatArea />} />
           <Route path='create-groups' element={<CreateGroups />} />
+          <Route path='users' element = {<Users />} />
+          <Route path='groups' element = {<Groups />} />
         </Route>
       </Routes>
     </div>
