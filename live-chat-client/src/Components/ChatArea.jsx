@@ -5,6 +5,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import MessageOther from "./MessageOther";
 import MessageSelf from "./MessageSelf";
+import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 
 function ChatArea() {
@@ -28,7 +30,13 @@ function ChatArea() {
 
 var props = conversations[0];
   return (
-    <div className="chatArea-container">
+    <AnimatePresence>
+    <motion.div 
+    initial={{opacity:0, scale:0}}
+    animate={{opacity:1, scale:1}}
+    exit={{opacity:0, scale:0}}
+    transition={{duration:0.3}}
+    className="chatArea-container">
       <div className="chatArea-header">
         <div className="combo">
           <div className="con-icon">{props.name[0]}</div>
@@ -64,7 +72,8 @@ var props = conversations[0];
           <SendIcon />
         </IconButton>
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 }
 

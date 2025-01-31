@@ -3,14 +3,22 @@ import "./myStyles.css";
 import { IconButton } from '@mui/material';
 import SearchIcon from "@mui/icons-material/Search";
 import logo from "../Image/logo.png";
+import { motion, useSpring } from "framer-motion"
+import { AnimatePresence } from 'framer-motion'
 
-
-function Users() {
+function Groups() {
   return (
-    <div className='list-container'>
+    <AnimatePresence>
+    <motion.div 
+    initial={{opacity:0, scale:0}}
+    animate={{opacity:1, scale:1}}
+    exit={{opacity:0, scale:0}}
+    transition={{duration:0.3}}
+
+     className='list-container'>
       <div className="ug-header">
         <img src={logo} alt="logo" style={{height:"2rem", width: "2rem", marginLeft: "10px"}} />
-        <p className='ug-title'>Online Users</p>
+        <p className='ug-title'>Available Groups</p>
       </div>
 
       <div className="sb-search">
@@ -62,9 +70,9 @@ function Users() {
           </div>
       </div>
       
-    </div>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 
-export default Users
-
+export default Groups

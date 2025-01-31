@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { toggleTheme } from "../Features/themeSliceReducer";
+import { motion } from "framer-motion"
 
 
 
@@ -45,12 +46,12 @@ function SideBar() {
   return (
     <div className="sideBar-container">
       <div className={"sb-header" + (lightTheme ? "" : " dark")}>
-        <div>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <IconButton >
             <AccountCircleIcon className={"icon" + (lightTheme ? "" : " dark")}/>
           </IconButton>
-        </div>
-        <div>
+        </motion.div>
+        <div >
           <IconButton onClick={() => {navigate('users')}}>
             <PersonAddAltIcon  className={"icon" + (lightTheme ? "" : " dark")}/>
           </IconButton>
@@ -73,8 +74,8 @@ function SideBar() {
           <SearchIcon className={"icon" + (lightTheme ? "" : " dark")}/>
         </IconButton>
         <input type="text" placeholder="search" className={"search-box" + (lightTheme ? "" : " dark")}/>
-      </div>
-      <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
+      </div> 
+      <div  className={"sb-conversations" + (lightTheme ? "" : " dark")}>
         {conversations.map((conversation) => {
           return <ConversationItem props={conversation} key={conversation.name} className={"icon" + (lightTheme ? "" : " dark")}/>
         })}
