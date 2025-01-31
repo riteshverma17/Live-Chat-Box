@@ -9,7 +9,7 @@ function MessageOther() {
   };
   return (
     <div className="other-messsage-container">
-      <div className="conversation-container">
+      <div className="otherMsg-container">
         <p className="con-icon">{props1.name[0]}</p>
         <div className="other-text-content">
           <p className="con-title">{props1.name}</p>
