@@ -10,10 +10,12 @@ function LoginPage() {
         <img src={logo} alt="Logo" className="welc ome-logo" />
       </div>
       <div className="login-box">
-        <p>Login to your Account</p>
+        <h1>Login to your Account</h1>
         <TextField id="outlined-basic" label="User Name" variant="outlined" />
         <TextField id = "outlined -password-input" label = "Password" type = "password" variant="outlined" />
         <Button variant="outlined" >Login</Button>
+        <p>Don't have an account? <a href={'/'}>SignUp</a></p>
+        
       </div>
     </div>
   );
