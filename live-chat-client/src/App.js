@@ -15,8 +15,8 @@ function App() {
     <div className="App">
      
       <Routes>
-        <Route path="/" element={<SignUpPage />} />
-        <Route path="loginPage" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="signUpPage" element={<SignUpPage/>} />
         <Route path='app' element={<MainContainer/>}>
           <Route path='welcome' element={<Welcome />} />
           <Route path='chat' element={<ChatArea />} />
